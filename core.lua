@@ -67,7 +67,7 @@ local function animate(button)
 end
 
 -- Cooldown spinner and action timers --
-timers,actions = {},{}
+local timers,actions = {},{}
 local function CooldownTimer(parent)
 	if timers[parent] then return timers[parent] end
 	local timer = CreateFrame('frame', nil, parent)
