@@ -724,12 +724,11 @@ local function CreateInterfacePanel() -- TODO: Clean this up
 			CrackCooldownConfigSizeSliderHigh:SetText(value)
 		end
 	)
-	--sizeSlider:SetSize(100,20)
-	sizeSlider:SetPoint("LEFT", sizeText, "RIGHT", 5, 0)
 	sizeSlider:SetMinMaxValues(12, 24)
 	sizeSlider:SetValue(SETTINGS.size)
 	CrackCooldownConfigSizeSliderHigh:SetText(SETTINGS.size)
 	sizeSlider:SetValueStep(2)
+	sizeSlider:SetObeyStepOnDrag(true)
 
 	local glintCheckBox =
 		CreateFrame("checkbutton", "CrackCooldownConfigGlintCheckBox", frame, "ChatConfigCheckButtonTemplate")
@@ -749,6 +748,7 @@ local function CreateInterfacePanel() -- TODO: Clean this up
 
 	SLASH_CRACKCOOLDOWN1 = "/crackcooldown"
 	function SlashCmdList.CRACKCOOLDOWN()
+		InterfaceOptionsFrame_OpenToCategory(frame)
 		InterfaceOptionsFrame_OpenToCategory(frame)
 	end
 end
