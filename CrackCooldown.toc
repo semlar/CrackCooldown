@@ -1,7 +1,7 @@
-## Interface: 80300
+## Interface: 90001
 ## Title: CrackCooldown
 ## Notes: Displays time until an ability is usable on its action button
 ## Author: Semlar
-## Version: 8.3.0.1
+## Version: 9.0.0.0
 ## SavedVariables: CrackCooldownSettings
 core.lua
